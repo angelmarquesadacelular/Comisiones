@@ -14,9 +14,11 @@ Public Class CargarArchivosComisionesDlg
         DGGraficaReporteSemanales.AllowUserToAddRows = False
         DGGraficaVolumenVenta.Visible = False
         DGGraficaReporteSemanales.Visible = False
+        GenerarReporteToolStripMenuItem.Enabled = False
     End Sub
 
     Private Sub CargarReportes()
+        ImportarArchivoToolStripMenuItem.Enabled = False
         TabReporte.Visible = False
         DGSinComision.Rows.Clear()
         DGConComision.Rows.Clear()
@@ -27,6 +29,8 @@ Public Class CargarArchivosComisionesDlg
         PBCargando.Visible = False
         tipoReporte = CapturarRegistros(DGImportacion, PBCargar, DGSinComision, DGConComision, TabReporte, DGVolumenVentaEfectivo, DGVolumenVentaCredito, TabConComision, TabSinComision, GraficaUno, GraficaDos, LbGraficaUno, LbGraficaDos, DGGraficaVolumenVenta, DGGraficaReporteSemanales)
         PBCargando.Visible = False
+        GenerarReporteToolStripMenuItem.Enabled = True
+        ImportarArchivoToolStripMenuItem.Enabled = True
     End Sub
 
     Private Sub GenerarReporteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GenerarReporteToolStripMenuItem.Click

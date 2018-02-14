@@ -22,19 +22,8 @@ Partial Class Reportes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(1025, 52)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(125, 33)
-        Me.Button1.TabIndex = 10
-        Me.Button1.Text = "Mostrar"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'CrystalReportViewer1
         '
@@ -44,34 +33,23 @@ Partial Class Reportes
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(12, 12)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
         Me.CrystalReportViewer1.ShowLogo = False
-        Me.CrystalReportViewer1.Size = New System.Drawing.Size(1007, 999)
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(1393, 1031)
         Me.CrystalReportViewer1.TabIndex = 15
         Me.CrystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(1051, 149)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 16
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Reportes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1191, 1045)
-        Me.Controls.Add(Me.Button2)
+        Me.ClientSize = New System.Drawing.Size(1437, 1055)
         Me.Controls.Add(Me.CrystalReportViewer1)
-        Me.Controls.Add(Me.Button1)
+        Me.MaximizeBox = False
         Me.Name = "Reportes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Reportes De Volumen De Venta"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Button1 As Button
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
-    Friend WithEvents Button2 As Button
 End Class

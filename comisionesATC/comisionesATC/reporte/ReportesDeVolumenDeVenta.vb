@@ -61,7 +61,7 @@ Public Class Reportes
         End If
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         'BindData()
         Dim ds As New DataSet()
         Dim dt As New DataTable()
@@ -86,7 +86,7 @@ Public Class Reportes
         'End Try
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
         MsgBox(CargarArchivosComisionesDlg.tipoReporte)
     End Sub
 
