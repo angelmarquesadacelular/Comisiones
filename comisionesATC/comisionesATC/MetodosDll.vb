@@ -247,7 +247,7 @@ Module MetodosDll
     End Function
 
     '
-    Public Sub GenerarReporte(ByVal CBTipoReporte As ComboBox, ByVal CBRuta As ComboBox, ByVal DGMayor As DataGridView, ByVal DGMenor As DataGridView, ByVal LbRuta As Label, ByVal Tabreporte As TabControl)
+    Public Sub GenerarReporte(ByVal CBTipoReporte As ComboBox, ByVal CBRuta As ComboBox, ByVal DGMayor As DataGridView, ByVal DGMenor As DataGridView, ByVal LbRuta As Label, ByVal Tabreporte As TabControl, ByVal TabMayor As TabPage, ByVal TabMenor As TabPage)
         'Reporte de porcentaje de activaciones
         If CBTipoReporte.Text = "Porcentaje de Activación" Then
             CBRuta.Visible = True
@@ -306,6 +306,8 @@ Module MetodosDll
                         LIMIT 10;"
                 mostrarDatosDataGridViewRecargas(sql, DGMenor)
                 Tabreporte.Visible = True
+                TabMayor.Text = "MAYOR"
+                TabMenor.Text = "MENOR"
             End If
         Else
             'Reporte de comisiones
@@ -315,21 +317,23 @@ Module MetodosDll
                 If CBRuta.Text = "-- Seleccione--" Then
 
                 Else
-                    sql = "SELECT cliente, SUM(comision) AS total
+                    sql = "SELECT cliente AS CLIENTE, SUM(comision) AS TOTAL
                             FROM volumenventa
                             WHERE puntoventa='" + CBRuta.Text.ToString + "'
-                            GROUP BY cliente
-                            ORDER BY total DESC
+                            GROUP BY CLIENTE
+                            ORDER BY TOTAL DESC
                             LIMIT 10;"
                     mostrarDatosDataGridViewComisiones(sql, DGMayor)
-                    sql = "SELECT cliente, SUM(comision) AS total
+                    sql = "SELECT cliente AS CLIENTE, SUM(comision) AS TOTAL
                             FROM volumenventa
                             WHERE puntoventa='" + CBRuta.Text.ToString + "'
-                            GROUP BY cliente
-                            ORDER BY total ASC
+                            GROUP BY CLIENTE
+                            ORDER BY TOTAL ASC
                             LIMIT 10;"
                     mostrarDatosDataGridViewComisiones(sql, DGMenor)
                     Tabreporte.Visible = True
+                    TabMayor.Text = "MAYOR"
+                    TabMenor.Text = "MENOR"
                 End If
             Else
                 'Reporte de utilidad
@@ -339,31 +343,33 @@ Module MetodosDll
                     If CBRuta.Text = "-- Seleccione--" Then
 
                     Else
-                        sql = "SELECT cliente, COUNT(*) AS recargas,SUM(utilidad) AS utilidad
+                        sql = "SELECT cliente AS CLIENTE, COUNT(*) AS RECARGAS,SUM(utilidad) AS UTILIDAD
                             FROM volumenventa
                             WHERE puntoventa='" + CBRuta.Text.ToString + "'
-                            GROUP BY cliente
-                            ORDER BY utilidad DESC
+                            GROUP BY CLIENTE
+                            ORDER BY UTILIDAD DESC
                             LIMIT 10;"
                         mostrarDatosDataGridViewComisiones(sql, DGMayor)
-                        sql = "SELECT cliente,count(*) AS recargas, SUM(utilidad) AS utilidad
+                        sql = "SELECT cliente AS CLIENTE,count(*) AS RECARGAS, SUM(utilidad) AS UTILIDAD
                             FROM volumenventa
                             WHERE puntoventa='" + CBRuta.Text.ToString + "'
-                            GROUP BY cliente
-                            ORDER BY utilidad ASC
+                            GROUP BY CLIENTE
+                            ORDER BY UTILIDAD ASC
                             LIMIT 10;"
                         mostrarDatosDataGridViewComisiones(sql, DGMenor)
                         Tabreporte.Visible = True
+                        TabMayor.Text = "MAYOR"
+                        TabMenor.Text = "MENOR"
                     End If
                 Else
                     'Reporte Comparación de Rutas
                     If CBTipoReporte.Text = "Comparación Rutas" Then
                         CBRuta.Visible = False
                         LbRuta.Visible = False
-                        sql = "SELECT puntoventa AS RUTA,SUM(utilidad) as utilidad
+                        sql = "SELECT puntoventa AS RUTA,SUM(utilidad) as UTILIDAD
                                 FROM volumenventa
                                 GROUP BY puntoventa
-                                ORDER BY utilidad DESC;"
+                                ORDER BY UTILIDAD DESC;"
                         mostrarDatosDataGridViewComisiones(sql, DGMayor)
                         sql = "SELECT  pv.tipo as RUTA,COUNT(*) AS NUMEROS,
                                 (SELECT COUNT(*)
@@ -394,24 +400,28 @@ Module MetodosDll
                                 ORDER BY PORCENTAJE DESC;"
                         mostrarDatosDataGridViewRecargas(sql, DGMenor)
                         Tabreporte.Visible = True
+                        TabMayor.Text = "UTILIDAD"
+                        TabMenor.Text = "% ACTIVACIÓN"
                     Else
                         'Reporte Comparación de fuerzas de ventas
                         If CBTipoReporte.Text = "Comparación Utilidad Fuerzas de Venta" Then
                             CBRuta.Visible = False
                             LbRuta.Visible = False
-                            sql = "SELECT lada,SUM(utilidad) as utilidad
+                            sql = "SELECT lada AS LADA,SUM(utilidad) as UTILIDAD
                                     FROM volumenventa
-                                    GROUP BY lada
-                                    ORDER BY utilidad DESC
+                                    GROUP BY LADA
+                                    ORDER BY UTILIDAD DESC
                                     LIMIT 10;"
                             mostrarDatosDataGridViewComisiones(sql, DGMayor)
-                            sql = "SELECT lada,SUM(utilidad) as utilidad
+                            sql = "SELECT lada AS LADA,SUM(utilidad) as UTILIDAD
                                     FROM volumenventa
-                                    GROUP BY lada
-                                    ORDER BY utilidad ASC
+                                    GROUP BY LADA
+                                    ORDER BY UTILIDAD ASC
                                     LIMIT 10;"
                             mostrarDatosDataGridViewComisiones(sql, DGMenor)
                             Tabreporte.Visible = True
+                            TabMayor.Text = "MAYOR"
+                            TabMenor.Text = "MENOR"
                         End If
                     End If
                 End If

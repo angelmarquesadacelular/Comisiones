@@ -22,6 +22,7 @@
                 Else
                     MsgBox("Datos de acceso incorrectos", MsgBoxStyle.Information, Title:="¡¡ATENCIÓN!!")
                     Limpiarformulario()
+                    TbxUsuario.Select()
                 End If
             Else
                 MsgBox("Favor de teclear el password de acceso", MsgBoxStyle.Information, Title:="¡¡ATENCIÓN!!")

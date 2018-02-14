@@ -6,15 +6,22 @@
         TabReporte.Visible = False
         DGReporteMayor.AllowUserToAddRows = False
         DGReporteMenor.AllowUserToAddRows = False
+        BtnImprimir.Visible = False
     End Sub
 
     Private Sub CBTipoReporte_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBTipoReporte.SelectedIndexChanged
         CBRuta.SelectedIndex = 0
-        GenerarReporte(CBTipoReporte, CBRuta, DGReporteMayor, DGReporteMenor, LbRuta, TabReporte)
+        TabReporte.Visible = False
+        BtnImprimir.Visible = False
+        GenerarReporte(CBTipoReporte, CBRuta, DGReporteMayor, DGReporteMenor, LbRuta, TabReporte, TabMayor, TabMenor)
     End Sub
 
     Private Sub CBRuta_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBRuta.SelectedIndexChanged
-        GenerarReporte(CBTipoReporte, CBRuta, DGReporteMayor, DGReporteMenor, LbRuta, TabReporte)
+        BtnImprimir.Visible = False
+        TabReporte.Visible = False
+        GenerarReporte(CBTipoReporte, CBRuta, DGReporteMayor, DGReporteMenor, LbRuta, TabReporte, TabMayor, TabMenor)
+
+        BtnImprimir.Visible = True
     End Sub
 
     Private Sub BtnImprimir_Click(sender As Object, e As EventArgs) Handles BtnImprimir.Click
