@@ -1,0 +1,52 @@
+-- MySQL dump 10.13  Distrib 5.7.12, for Win32 (AMD64)
+--
+-- Host: 187.189.152.4    Database: recargasatc
+-- ------------------------------------------------------
+-- Server version	5.5.5-10.1.25-MariaDB
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `monto_carrier`
+--
+
+DROP TABLE IF EXISTS `monto_carrier`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `monto_carrier` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `monto` int(10) unsigned NOT NULL,
+  `carrier_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=86 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `monto_carrier`
+--
+
+LOCK TABLES `monto_carrier` WRITE;
+/*!40000 ALTER TABLE `monto_carrier` DISABLE KEYS */;
+INSERT INTO `monto_carrier` VALUES (1,10,1),(2,20,1),(3,30,1),(4,50,1),(5,80,1),(6,100,1),(7,150,1),(8,200,1),(9,300,1),(10,500,1),(11,10,3),(12,20,3),(13,30,3),(14,40,3),(15,50,3),(16,60,3),(17,70,3),(18,80,3),(19,100,3),(20,120,3),(21,150,3),(22,200,3),(23,250,3),(24,300,3),(25,400,3),(26,500,3),(27,5,2),(28,20,2),(29,30,2),(30,50,2),(31,100,2),(32,150,2),(33,200,2),(34,300,2),(35,500,2),(36,10,6),(37,20,6),(38,30,6),(39,50,6),(40,100,6),(41,150,6),(42,200,6),(43,300,6),(44,500,6),(45,10,4),(46,20,4),(47,30,4),(48,50,4),(49,55,4),(50,70,4),(51,100,4),(52,150,4),(53,200,4),(54,300,4),(55,500,4),(56,600,4),(57,800,4),(58,900,4),(59,1000,4),(60,1200,4),(61,20,7),(62,30,7),(63,40,7),(64,50,7),(65,100,7),(66,150,7),(67,200,7),(68,300,7),(69,500,7),(70,10,5),(71,20,5),(72,30,5),(73,50,5),(74,55,5),(75,70,5),(76,100,5),(77,150,5),(78,200,5),(79,300,5),(80,500,5),(81,600,5),(82,800,5),(83,900,5),(84,1000,5),(85,1200,5);
+/*!40000 ALTER TABLE `monto_carrier` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-02-12 17:54:33

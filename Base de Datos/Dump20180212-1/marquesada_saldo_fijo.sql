@@ -1,0 +1,52 @@
+-- MySQL dump 10.13  Distrib 5.7.12, for Win32 (AMD64)
+--
+-- Host: 192.168.1.108    Database: marquesada
+-- ------------------------------------------------------
+-- Server version	5.7.17-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `saldo_fijo`
+--
+
+DROP TABLE IF EXISTS `saldo_fijo`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `saldo_fijo` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `cantidad` double NOT NULL,
+  `usuario_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `saldo_fijo`
+--
+
+LOCK TABLES `saldo_fijo` WRITE;
+/*!40000 ALTER TABLE `saldo_fijo` DISABLE KEYS */;
+INSERT INTO `saldo_fijo` VALUES (1,1800,1),(2,900,2),(3,229,3),(4,800,4),(5,1000,5),(6,800,6),(7,800,7),(8,0,8),(9,700,9),(10,700,10),(11,700,11),(12,1000,12),(13,0,13),(14,1000,14),(15,1300,15),(16,0,16),(17,0,17),(18,0,18),(19,0,19),(20,800,20),(21,2500,21),(22,2500,22),(23,1000,23),(24,1800,24),(25,800,25),(26,1500,26),(27,1250,27),(28,0,28),(29,800,29),(30,0,30),(31,0,31),(32,0,32);
+/*!40000 ALTER TABLE `saldo_fijo` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-02-12 18:00:45
