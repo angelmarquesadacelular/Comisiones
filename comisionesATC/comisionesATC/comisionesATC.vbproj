@@ -101,6 +101,12 @@
     <Compile Include="ReportesEstadisticosDlg.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="reporte\Comisiones.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Comisiones.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="reporte\DGGraficaReporteSemanales.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -156,6 +162,12 @@
     <Compile Include="reporte\ReportesDeVolumenDeVenta.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="reporte\Utilidad.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Utilidad.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="SeguridadDll.vb" />
     <Compile Include="Web References\mx.atc\Reference.vb">
       <AutoGen>True</AutoGen>
@@ -172,6 +184,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportesEstadisticosDlg.resx">
       <DependentUpon>ReportesEstadisticosDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte\Comisiones.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Comisiones.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="reporte\DGGraficaReporteSemanales.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -199,6 +215,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="reporte\ReportesDeVolumenDeVenta.resx">
       <DependentUpon>ReportesDeVolumenDeVenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte\Utilidad.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Utilidad.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
