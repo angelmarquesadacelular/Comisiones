@@ -11,12 +11,24 @@
         permiso_id = AccesoUsuario(TbxUsuario.Text, passwordEncriptado)
         'Se verifica que el usuario tenga permiso de accesar al sistema
         If permiso_id > 0 Then
-
+            Limpiarformulario()
+            Inicio.EstadísticasToolStripMenuItem.Enabled = True
+            Inicio.CargarReportesToolStripMenuItem.Enabled = True
+            Inicio.SalirToolStripMenuItem.Enabled = True
+            Inicio.LoginToolStripMenuItem.Enabled = False
+            Me.Visible = False
+        Else
+            MsgBox("Datos de acceso incorrectos", MsgBoxStyle.Information, Title:="¡¡ATENCIÓN!!")
+            Limpiarformulario()
         End If
     End Sub
 
     Private Sub Limpiarformulario()
         TbxPassword.Text = ""
         TbxUsuario.Text = ""
+    End Sub
+
+    Private Sub LoginDlg_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        permiso_id = 0
     End Sub
 End Class

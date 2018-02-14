@@ -58,6 +58,7 @@ Partial Class LoginDlg
         '
         Me.TbxPassword.Location = New System.Drawing.Point(87, 49)
         Me.TbxPassword.Name = "TbxPassword"
+        Me.TbxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TbxPassword.Size = New System.Drawing.Size(206, 22)
         Me.TbxPassword.TabIndex = 3
         '
@@ -65,7 +66,7 @@ Partial Class LoginDlg
         '
         Me.BtnEntrar.Location = New System.Drawing.Point(122, 88)
         Me.BtnEntrar.Name = "BtnEntrar"
-        Me.BtnEntrar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnEntrar.Size = New System.Drawing.Size(75, 36)
         Me.BtnEntrar.TabIndex = 4
         Me.BtnEntrar.Text = "Entrar"
         Me.BtnEntrar.UseVisualStyleBackColor = True
