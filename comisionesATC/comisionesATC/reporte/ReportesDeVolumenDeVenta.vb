@@ -7,17 +7,6 @@ Public Class Reportes
         InitializeComponent()
         'BindData()
     End Sub
-    'Private Sub BindData()
-    '    Dim dt As New DataTable()
-    '    Using con As New MySqlConnection("server=127.0.0.1;database=empresa;user id=root;password=;")
-    '        con.Open()
-    '        Dim cmd As New MySqlCommand("Select * from detalle where codigoVenta = '" & Me.txtbuscar.Text & "' and codigoProducto = '" & Me.TextBox1.Text & "'", con)
-    '        Dim da As New MySqlDataAdapter(cmd)
-    '        da.Fill(dt)
-    '        con.Close()
-    '    End Using
-    '    DataGridView1.DataSource = dt
-    'End Sub
     Private Sub Reportes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If CargarArchivosComisionesDlg.tipoReporte = 1 Then
             Dim ds As New DataSet()

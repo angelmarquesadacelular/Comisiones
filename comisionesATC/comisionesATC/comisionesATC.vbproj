@@ -119,6 +119,12 @@
       <DependentUpon>ComparacionRutasmenos.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="reporte\ComparacionUtilidad.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComparacionUtilidad.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="reporte\DGGraficaReporteSemanales.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -208,6 +214,10 @@
     <EmbeddedResource Include="reporte\ComparacionRutasmenos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ComparacionRutasmenos.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte\ComparacionUtilidad.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ComparacionUtilidad.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="reporte\DGGraficaReporteSemanales.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
