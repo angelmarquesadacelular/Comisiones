@@ -247,7 +247,7 @@ Module MetodosDll
     End Function
 
     '
-    Public Sub GenerarReporte(ByVal CBTipoReporte As ComboBox, ByVal CBRuta As ComboBox, ByVal DGMayor As DataGridView, ByVal DGMenor As DataGridView, ByVal LbRuta As Label, ByVal Tabreporte As TabControl, ByVal TabMayor As TabPage, ByVal TabMenor As TabPage)
+    Public Sub GenerarReporte(ByVal CBTipoReporte As ComboBox, ByVal CBRuta As ComboBox, ByVal DGMayor As DataGridView, ByVal DGMenor As DataGridView, ByVal LbRuta As Label, ByVal Tabreporte As TabControl, ByVal TabMayor As TabPage, ByVal TabMenor As TabPage, ByVal BtnReporte As Button)
         'Reporte de porcentaje de activaciones
         If CBTipoReporte.Text = "Porcentaje de Activación" Then
             CBRuta.Visible = True
@@ -308,6 +308,7 @@ Module MetodosDll
                 Tabreporte.Visible = True
                 TabMayor.Text = "MAYOR"
                 TabMenor.Text = "MENOR"
+                BtnReporte.Visible = True
             End If
         Else
             'Reporte de comisiones
@@ -334,6 +335,7 @@ Module MetodosDll
                     Tabreporte.Visible = True
                     TabMayor.Text = "MAYOR"
                     TabMenor.Text = "MENOR"
+                    BtnReporte.Visible = True
                 End If
             Else
                 'Reporte de utilidad
@@ -360,6 +362,7 @@ Module MetodosDll
                         Tabreporte.Visible = True
                         TabMayor.Text = "MAYOR"
                         TabMenor.Text = "MENOR"
+                        BtnReporte.Visible = True
                     End If
                 Else
                     'Reporte Comparación de Rutas
@@ -402,6 +405,7 @@ Module MetodosDll
                         Tabreporte.Visible = True
                         TabMayor.Text = "UTILIDAD"
                         TabMenor.Text = "% ACTIVACIÓN"
+                        BtnReporte.Visible = True
                     Else
                         'Reporte Comparación de fuerzas de ventas
                         If CBTipoReporte.Text = "Comparación Utilidad Fuerzas de Venta" Then
@@ -422,6 +426,7 @@ Module MetodosDll
                             Tabreporte.Visible = True
                             TabMayor.Text = "MAYOR"
                             TabMenor.Text = "MENOR"
+                            BtnReporte.Visible = True
                         End If
                     End If
                 End If

@@ -22,8 +22,8 @@ Partial Class ReportesEstadisticosDlg
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.LbTipoReporte = New System.Windows.Forms.Label()
         Me.CBTipoReporte = New System.Windows.Forms.ComboBox()
         Me.LbRuta = New System.Windows.Forms.Label()
@@ -79,7 +79,7 @@ Partial Class ReportesEstadisticosDlg
         '
         'BtnImprimir
         '
-        Me.BtnImprimir.Location = New System.Drawing.Point(648, 9)
+        Me.BtnImprimir.Location = New System.Drawing.Point(648, 6)
         Me.BtnImprimir.Name = "BtnImprimir"
         Me.BtnImprimir.Size = New System.Drawing.Size(75, 31)
         Me.BtnImprimir.TabIndex = 5
@@ -92,7 +92,7 @@ Partial Class ReportesEstadisticosDlg
         Me.TabMenor.Location = New System.Drawing.Point(4, 25)
         Me.TabMenor.Name = "TabMenor"
         Me.TabMenor.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabMenor.Size = New System.Drawing.Size(754, 637)
+        Me.TabMenor.Size = New System.Drawing.Size(645, 637)
         Me.TabMenor.TabIndex = 1
         Me.TabMenor.Text = "Menor"
         Me.TabMenor.UseVisualStyleBackColor = True
@@ -101,14 +101,14 @@ Partial Class ReportesEstadisticosDlg
         '
         Me.DGReporteMenor.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DGReporteMenor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGReporteMenor.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGReporteMenor.DefaultCellStyle = DataGridViewCellStyle1
         Me.DGReporteMenor.Location = New System.Drawing.Point(6, 12)
         Me.DGReporteMenor.Name = "DGReporteMenor"
         Me.DGReporteMenor.RowTemplate.Height = 24
@@ -130,14 +130,14 @@ Partial Class ReportesEstadisticosDlg
         '
         Me.DGReporteMayor.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DGReporteMayor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGReporteMayor.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGReporteMayor.DefaultCellStyle = DataGridViewCellStyle2
         Me.DGReporteMayor.Location = New System.Drawing.Point(6, 19)
         Me.DGReporteMayor.Name = "DGReporteMayor"
         Me.DGReporteMayor.RowTemplate.Height = 24
