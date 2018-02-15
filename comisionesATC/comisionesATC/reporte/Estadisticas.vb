@@ -76,6 +76,48 @@
             cr.SetDataSource(ds)
             CREstadisticas.ReportSource = cr
             CREstadisticas.Refresh()
+
+        ElseIf ReportesEstadisticosDlg.CBTipoReporte.Text = "Comparación Rutas" Then
+
+            If ReportesEstadisticosDlg.TabReporte.SelectedIndex = 0 Then
+                Dim ds As New DataSet()
+                Dim dt As New DataTable()
+                dt.Columns.Add("Ruta", GetType(String))
+                dt.Columns.Add("Utilidad", GetType(Double))
+                For Each dgr As DataGridViewRow In ReportesEstadisticosDlg.DGReporteMayor.Rows
+
+
+                    dt.Rows.Add(dgr.Cells(0).Value, dgr.Cells(1).Value)
+
+                Next
+                ds.Tables.Add(dt)
+                ds.WriteXmlSchema("ComparacionRutasmas.xml")
+                Dim cr = New ComparacionRutasmas()
+                cr.SetDataSource(ds)
+                CREstadisticas.ReportSource = cr
+                CREstadisticas.Refresh()
+            Else
+                Dim ds As New DataSet()
+                Dim dt As New DataTable()
+                dt.Columns.Add("Ruta", GetType(String))
+                dt.Columns.Add("Numeros", GetType(Int16))
+                dt.Columns.Add("Activados", GetType(Int16))
+                dt.Columns.Add("Porcentaje", GetType(Double))
+                For Each dgr As DataGridViewRow In ReportesEstadisticosDlg.DGReporteMenor.Rows
+
+
+                    dt.Rows.Add(dgr.Cells(0).Value, dgr.Cells(1).Value, dgr.Cells(2).Value, dgr.Cells(3).Value)
+
+                Next
+                ds.Tables.Add(dt)
+                ds.WriteXmlSchema("ComparacionRutasmenos.xml")
+                Dim cr = New ComparacionRutasmas()
+                cr.SetDataSource(ds)
+                CREstadisticas.ReportSource = cr
+                CREstadisticas.Refresh()
+            End If
+
+
         End If
     End Sub
 
