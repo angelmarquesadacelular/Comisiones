@@ -278,7 +278,7 @@ Module MetodosDll
                         AND pv.tipo='" + CBRuta.Text.ToString + "'
                         GROUP BY cliente
                         ORDER BY PORCENTAJE DESC
-                        LIMIT 10;"
+                        LIMIT 15;"
                 mostrarDatosDataGridViewRecargas(sql, DGMayor)
                 'Se muestra el resultado de una sola ruta
                 sql = "SELECT  CONCAT(pv.tipo,'-',cc.numero) as CLIENTE,COUNT(*) AS NUMEROS,
@@ -303,7 +303,7 @@ Module MetodosDll
                         AND pv.tipo='" + CBRuta.Text.ToString + "'
                         GROUP BY cliente
                         ORDER BY PORCENTAJE ASC
-                        LIMIT 10;"
+                        LIMIT 15;"
                 mostrarDatosDataGridViewRecargas(sql, DGMenor)
                 Tabreporte.Visible = True
                 TabMayor.Text = "MAYOR"
@@ -323,14 +323,14 @@ Module MetodosDll
                             WHERE puntoventa='" + CBRuta.Text.ToString + "'
                             GROUP BY CLIENTE
                             ORDER BY TOTAL DESC
-                            LIMIT 10;"
+                            LIMIT 15;"
                     mostrarDatosDataGridViewComisiones(sql, DGMayor)
                     sql = "SELECT cliente AS CLIENTE, SUM(comision) AS TOTAL
                             FROM volumenventa
                             WHERE puntoventa='" + CBRuta.Text.ToString + "'
                             GROUP BY CLIENTE
                             ORDER BY TOTAL ASC
-                            LIMIT 10;"
+                            LIMIT 15;"
                     mostrarDatosDataGridViewComisiones(sql, DGMenor)
                     Tabreporte.Visible = True
                     TabMayor.Text = "MAYOR"
@@ -350,14 +350,14 @@ Module MetodosDll
                             WHERE puntoventa='" + CBRuta.Text.ToString + "'
                             GROUP BY CLIENTE
                             ORDER BY UTILIDAD DESC
-                            LIMIT 10;"
+                            LIMIT 15;"
                         mostrarDatosDataGridViewComisiones(sql, DGMayor)
                         sql = "SELECT cliente AS CLIENTE,count(*) AS RECARGAS, SUM(utilidad) AS UTILIDAD
                             FROM volumenventa
                             WHERE puntoventa='" + CBRuta.Text.ToString + "'
                             GROUP BY CLIENTE
                             ORDER BY UTILIDAD ASC
-                            LIMIT 10;"
+                            LIMIT 15;"
                         mostrarDatosDataGridViewComisiones(sql, DGMenor)
                         Tabreporte.Visible = True
                         TabMayor.Text = "MAYOR"
@@ -415,13 +415,13 @@ Module MetodosDll
                                     FROM volumenventa
                                     GROUP BY LADA
                                     ORDER BY UTILIDAD DESC
-                                    LIMIT 10;"
+                                    LIMIT 15;"
                             mostrarDatosDataGridViewComisiones(sql, DGMayor)
                             sql = "SELECT lada AS LADA,SUM(utilidad) as UTILIDAD
                                     FROM volumenventa
                                     GROUP BY LADA
                                     ORDER BY UTILIDAD ASC
-                                    LIMIT 10;"
+                                    LIMIT 15;"
                             mostrarDatosDataGridViewComisiones(sql, DGMenor)
                             Tabreporte.Visible = True
                             TabMayor.Text = "MAYOR"
