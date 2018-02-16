@@ -2,7 +2,7 @@
 Imports MySql.Data.MySqlClient
 Module ComisionesAtcBdDll
     'Variables para la conexión a la base de datos
-    Dim conexion As New MySqlConnection("server=localhost ; user=root; password=root; database=comisionesatc; port=3300")
+    Dim conexion As New MySqlConnection("server=localhost ; user=root; password=; database=comisionesatc; port=3306")
     'Dim conexion As New MySqlConnection("server=187.189.152.4 ; user=xampp; password=marquesada?466; database=recargasatc; port=3306")
     Dim ds As MySqlDataAdapter
     Dim dt As DataTable
