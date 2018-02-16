@@ -84,5 +84,34 @@ CREATE TABLE volumenVenta
     numero_id INT UNSIGNED NOT NULL,
     puntoventa VARCHAR(20) NOT NULL,
     cliente VARCHAR(20) NOT NULL,
+    recargaatc DOUBLE NOT NULL,
+    utilidad DOUBLE NOT NULL,
     periodo_id INT UNSIGNED NOT NULL REFERENCES periodo.id ON UPDATE CASCADE
 );
+
+CREATE TABLE permiso
+(	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	tipo VARCHAR(50) NOT NULL
+);
+INSERT INTO permiso(tipo)VALUES('NORMAL');
+INSERT INTO permiso(tipo)VALUES('ADMINISTRADOR');
+INSERT INTO permiso(tipo)VALUES('SUPER ADMINISTRADOR');
+
+CREATE TABLE usuario
+(	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	nombre VARCHAR(200) NOT NULL,
+    activo BOOL NOT NULL
+);
+
+INSERT INTO usuario(nombre,activo)VALUES('Sistemas',true);
+INSERT INTO usuario(nombre,activo)VALUES('David Samano Ferreira',true);
+
+CREATE TABLE permiso_usuario
+(	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	nickname VARCHAR(200) NOT NULL,
+    pass VARCHAR(200) NOT NULL,
+    usuario_id INT UNSIGNED NOT NULL REFERENCES usuario.id ON UPDATE CASCADE,
+    permiso_id INT UNSIGNED NOT NULL REFERENCES permiso.id ON UPDATE CASCADE
+);
+INSERT INTO permiso_usuario(nickname,pass,usuario_id,permiso_id)VALUES('Sistemas','fru0ljjXxDC3pogal8pC3u0eOMTfXUjnhqGHuDThErw=',1,3);
+INSERT INTO permiso_usuario(nickname,pass,usuario_id,permiso_id)VALUES('davidsf','aGHZRJC8LwYZcE7nLZm/OeWR+4WsCxPifLtE18pvcXo=',2,3);
