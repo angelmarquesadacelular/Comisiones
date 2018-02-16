@@ -22,8 +22,8 @@ Partial Class ReportesEstadisticosDlg
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.LbTipoReporte = New System.Windows.Forms.Label()
         Me.CBTipoReporte = New System.Windows.Forms.ComboBox()
         Me.LbRuta = New System.Windows.Forms.Label()
@@ -32,17 +32,17 @@ Partial Class ReportesEstadisticosDlg
         Me.TabMenor = New System.Windows.Forms.TabPage()
         Me.DGReporteMenor = New System.Windows.Forms.DataGridView()
         Me.TabMayor = New System.Windows.Forms.TabPage()
-        Me.PBCargando = New System.Windows.Forms.PictureBox()
-        Me.DGReporteMayor = New System.Windows.Forms.DataGridView()
         Me.TabReporte = New System.Windows.Forms.TabControl()
         Me.LbRango = New System.Windows.Forms.Label()
         Me.CBRango = New System.Windows.Forms.ComboBox()
+        Me.BtnGenerar = New System.Windows.Forms.Button()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.DGReporteMayor = New System.Windows.Forms.DataGridView()
         Me.TabMenor.SuspendLayout()
         CType(Me.DGReporteMenor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabMayor.SuspendLayout()
-        CType(Me.PBCargando, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DGReporteMayor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabReporte.SuspendLayout()
+        CType(Me.DGReporteMayor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LbTipoReporte
@@ -105,14 +105,14 @@ Partial Class ReportesEstadisticosDlg
         '
         Me.DGReporteMenor.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DGReporteMenor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGReporteMenor.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGReporteMenor.DefaultCellStyle = DataGridViewCellStyle1
         Me.DGReporteMenor.Location = New System.Drawing.Point(6, 12)
         Me.DGReporteMenor.Name = "DGReporteMenor"
         Me.DGReporteMenor.RowTemplate.Height = 24
@@ -121,7 +121,6 @@ Partial Class ReportesEstadisticosDlg
         '
         'TabMayor
         '
-        Me.TabMayor.Controls.Add(Me.PBCargando)
         Me.TabMayor.Controls.Add(Me.DGReporteMayor)
         Me.TabMayor.Location = New System.Drawing.Point(4, 25)
         Me.TabMayor.Name = "TabMayor"
@@ -130,34 +129,6 @@ Partial Class ReportesEstadisticosDlg
         Me.TabMayor.TabIndex = 0
         Me.TabMayor.Text = "Mayor"
         Me.TabMayor.UseVisualStyleBackColor = True
-        '
-        'PBCargando
-        '
-        Me.PBCargando.Image = Global.comisionesATC.My.Resources.Resources.IllinformedMeaslyKoi_max_1mb
-        Me.PBCargando.Location = New System.Drawing.Point(228, 182)
-        Me.PBCargando.Name = "PBCargando"
-        Me.PBCargando.Size = New System.Drawing.Size(266, 148)
-        Me.PBCargando.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PBCargando.TabIndex = 1
-        Me.PBCargando.TabStop = False
-        '
-        'DGReporteMayor
-        '
-        Me.DGReporteMayor.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.DGReporteMayor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DGReporteMayor.DefaultCellStyle = DataGridViewCellStyle4
-        Me.DGReporteMayor.Location = New System.Drawing.Point(6, 19)
-        Me.DGReporteMayor.Name = "DGReporteMayor"
-        Me.DGReporteMayor.RowTemplate.Height = 24
-        Me.DGReporteMayor.Size = New System.Drawing.Size(629, 612)
-        Me.DGReporteMayor.TabIndex = 0
         '
         'TabReporte
         '
@@ -187,11 +158,47 @@ Partial Class ReportesEstadisticosDlg
         Me.CBRango.Size = New System.Drawing.Size(121, 24)
         Me.CBRango.TabIndex = 7
         '
+        'BtnGenerar
+        '
+        Me.BtnGenerar.Location = New System.Drawing.Point(281, 41)
+        Me.BtnGenerar.Name = "BtnGenerar"
+        Me.BtnGenerar.Size = New System.Drawing.Size(75, 24)
+        Me.BtnGenerar.TabIndex = 8
+        Me.BtnGenerar.Text = "Generar"
+        Me.BtnGenerar.UseVisualStyleBackColor = True
+        '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(565, 766)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(100, 23)
+        Me.ProgressBar1.TabIndex = 9
+        '
+        'DGReporteMayor
+        '
+        Me.DGReporteMayor.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.DGReporteMayor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DGReporteMayor.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DGReporteMayor.Location = New System.Drawing.Point(6, 19)
+        Me.DGReporteMayor.Name = "DGReporteMayor"
+        Me.DGReporteMayor.RowTemplate.Height = 24
+        Me.DGReporteMayor.Size = New System.Drawing.Size(629, 612)
+        Me.DGReporteMayor.TabIndex = 0
+        '
         'ReportesEstadisticosDlg
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(727, 801)
+        Me.Controls.Add(Me.ProgressBar1)
+        Me.Controls.Add(Me.BtnGenerar)
         Me.Controls.Add(Me.CBRango)
         Me.Controls.Add(Me.LbRango)
         Me.Controls.Add(Me.BtnImprimir)
@@ -207,10 +214,8 @@ Partial Class ReportesEstadisticosDlg
         Me.TabMenor.ResumeLayout(False)
         CType(Me.DGReporteMenor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabMayor.ResumeLayout(False)
-        Me.TabMayor.PerformLayout()
-        CType(Me.PBCargando, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DGReporteMayor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabReporte.ResumeLayout(False)
+        CType(Me.DGReporteMayor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -224,9 +229,10 @@ Partial Class ReportesEstadisticosDlg
     Friend WithEvents TabMenor As TabPage
     Friend WithEvents DGReporteMenor As DataGridView
     Friend WithEvents TabMayor As TabPage
-    Friend WithEvents DGReporteMayor As DataGridView
     Friend WithEvents TabReporte As TabControl
-    Friend WithEvents PBCargando As PictureBox
     Friend WithEvents LbRango As Label
     Friend WithEvents CBRango As ComboBox
+    Friend WithEvents BtnGenerar As Button
+    Friend WithEvents ProgressBar1 As ProgressBar
+    Friend WithEvents DGReporteMayor As DataGridView
 End Class
