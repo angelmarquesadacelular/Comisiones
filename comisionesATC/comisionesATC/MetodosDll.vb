@@ -3,7 +3,10 @@
 Module MetodosDll
     Dim sql As String = ""
     ' Metodo que captura los registros de los excel en la base de datos
-    Public Function CapturarRegistros(ByVal DgDatos As DataGridView, ByVal PBCargrando As ProgressBar, ByVal DGSinComision As DataGridView, ByVal DGConComision As DataGridView, ByVal TabComisiones As TabControl, ByVal DGEfectivo As DataGridView, ByVal DGCredito As DataGridView, ByVal TabCon As TabPage, ByVal TabSin As TabPage, ByVal GraficaUno As Chart, ByVal GraficaDos As Chart, ByVal LbGraficaUno As Label, ByVal LbGrafciaDos As Label, ByVal DGGraficaVolumen As DataGridView, ByVal DGGraficaSemanal As DataGridView) As Integer
+    Public Function CapturarRegistros(ByVal DgDatos As DataGridView, ByVal PBCargrando As ProgressBar, ByVal DGSinComision As DataGridView, ByVal DGConComision As DataGridView,
+                                      ByVal TabComisiones As TabControl, ByVal DGEfectivo As DataGridView, ByVal DGCredito As DataGridView, ByVal TabCon As TabPage, ByVal TabSin As TabPage,
+                                      ByVal GraficaUno As Chart, ByVal GraficaDos As Chart, ByVal LbGraficaUno As Label, ByVal LbGrafciaDos As Label, ByVal DGGraficaVolumen As DataGridView,
+                                      ByVal DGGraficaSemanal As DataGridView) As Integer
         'Obtener el periodo del informe de comisiones
         Dim periodo As String = DgDatos.Item(0, 1).Value
         Dim producto As String = DgDatos.Item(2, 4).Value
@@ -247,16 +250,22 @@ Module MetodosDll
     End Function
 
     '
-    Public Sub GenerarReporte(ByVal CBTipoReporte As ComboBox, ByVal CBRuta As ComboBox, ByVal DGMayor As DataGridView, ByVal DGMenor As DataGridView, ByVal LbRuta As Label, ByVal Tabreporte As TabControl, ByVal TabMayor As TabPage, ByVal TabMenor As TabPage, ByVal BtnReporte As Button)
+    Public Sub GenerarReporte(ByVal CBTipoReporte As ComboBox, ByVal CBRuta As ComboBox, ByVal DGMayor As DataGridView, ByVal DGMenor As DataGridView, ByVal LbRuta As Label, ByVal Tabreporte As TabControl,
+                              ByVal TabMayor As TabPage, ByVal TabMenor As TabPage, ByVal BtnReporte As Button, ByVal PBCargando As PictureBox, ByVal LbRango As Label, ByVal CBRango As ComboBox)
         'Reporte de porcentaje de activaciones
         If CBTipoReporte.Text = "Porcentaje de Activación" Then
             CBRuta.Visible = True
             LbRuta.Visible = True
+            CBRango.Visible = True
+            LbRango.Visible = True
             If CBRuta.Text = "-- Seleccione--" Then
 
             Else
-                'Se muestra el resultado de una sola rutas
-                sql = "SELECT  CONCAT(pv.tipo,'-',cc.numero) as CLIENTE,COUNT(*) AS NUMEROS,
+                If CBRango.Text = "-- Seleccione--" Then
+
+                Else
+                    'Se muestra el resultado de una sola rutas
+                    sql = "SELECT  CONCAT(pv.tipo,'-',cc.numero) as CLIENTE,COUNT(*) AS NUMEROS,
                         (SELECT COUNT(*)
                         FROM cliente clie,numero nume,activado act
                         WHERE act.numero_id=nume.id
@@ -278,10 +287,10 @@ Module MetodosDll
                         AND pv.tipo='" + CBRuta.Text.ToString + "'
                         GROUP BY cliente
                         ORDER BY PORCENTAJE DESC
-                        LIMIT 10;"
-                mostrarDatosDataGridViewRecargas(sql, DGMayor)
-                'Se muestra el resultado de una sola ruta
-                sql = "SELECT  CONCAT(pv.tipo,'-',cc.numero) as CLIENTE,COUNT(*) AS NUMEROS,
+                        LIMIT " + CBRango.Text.ToString + ";"
+                    mostrarDatosDataGridViewRecargas(sql, DGMayor)
+                    'Se muestra el resultado de una sola ruta
+                    sql = "SELECT  CONCAT(pv.tipo,'-',cc.numero) as CLIENTE,COUNT(*) AS NUMEROS,
                         (SELECT COUNT(*)
                         FROM cliente clie,numero nume,activado act
                         WHERE act.numero_id=nume.id
@@ -303,72 +312,89 @@ Module MetodosDll
                         AND pv.tipo='" + CBRuta.Text.ToString + "'
                         GROUP BY cliente
                         ORDER BY PORCENTAJE ASC
-                        LIMIT 10;"
-                mostrarDatosDataGridViewRecargas(sql, DGMenor)
-                Tabreporte.Visible = True
-                TabMayor.Text = "MAYOR"
-                TabMenor.Text = "MENOR"
-                BtnReporte.Visible = True
+                        LIMIT " + CBRango.Text.ToString + ";"
+                    mostrarDatosDataGridViewRecargas(sql, DGMenor)
+                    Tabreporte.Visible = True
+                    TabMayor.Text = "MAYOR"
+                    TabMenor.Text = "MENOR"
+                    BtnReporte.Visible = True
+                End If
+
             End If
         Else
             'Reporte de comisiones
             If CBTipoReporte.Text = "Comisiones" Then
                 CBRuta.Visible = True
                 LbRuta.Visible = True
+                CBRango.Visible = True
+                LbRango.Visible = True
                 If CBRuta.Text = "-- Seleccione--" Then
 
                 Else
-                    sql = "SELECT cliente AS CLIENTE, SUM(comision) AS TOTAL
+                    If CBRango.Text = "-- Seleccione--" Then
+
+                    Else
+                        sql = "SELECT cliente AS CLIENTE, SUM(comision) AS TOTAL
                             FROM volumenventa
                             WHERE puntoventa='" + CBRuta.Text.ToString + "'
                             GROUP BY CLIENTE
                             ORDER BY TOTAL DESC
-                            LIMIT 10;"
-                    mostrarDatosDataGridViewComisiones(sql, DGMayor)
-                    sql = "SELECT cliente AS CLIENTE, SUM(comision) AS TOTAL
+                            LIMIT " + CBRango.Text.ToString + ";"
+                        mostrarDatosDataGridViewComisiones(sql, DGMayor)
+                        sql = "SELECT cliente AS CLIENTE, SUM(comision) AS TOTAL
                             FROM volumenventa
                             WHERE puntoventa='" + CBRuta.Text.ToString + "'
                             GROUP BY CLIENTE
                             ORDER BY TOTAL ASC
-                            LIMIT 10;"
-                    mostrarDatosDataGridViewComisiones(sql, DGMenor)
-                    Tabreporte.Visible = True
-                    TabMayor.Text = "MAYOR"
-                    TabMenor.Text = "MENOR"
-                    BtnReporte.Visible = True
-                End If
-            Else
-                'Reporte de utilidad
-                If CBTipoReporte.Text = "Utilidad" Then
-                    CBRuta.Visible = True
-                    LbRuta.Visible = True
-                    If CBRuta.Text = "-- Seleccione--" Then
-
-                    Else
-                        sql = "SELECT cliente AS CLIENTE, COUNT(*) AS RECARGAS,SUM(utilidad) AS UTILIDAD
-                            FROM volumenventa
-                            WHERE puntoventa='" + CBRuta.Text.ToString + "'
-                            GROUP BY CLIENTE
-                            ORDER BY UTILIDAD DESC
-                            LIMIT 10;"
-                        mostrarDatosDataGridViewComisiones(sql, DGMayor)
-                        sql = "SELECT cliente AS CLIENTE,count(*) AS RECARGAS, SUM(utilidad) AS UTILIDAD
-                            FROM volumenventa
-                            WHERE puntoventa='" + CBRuta.Text.ToString + "'
-                            GROUP BY CLIENTE
-                            ORDER BY UTILIDAD ASC
-                            LIMIT 10;"
+                            LIMIT " + CBRango.Text.ToString + ";"
                         mostrarDatosDataGridViewComisiones(sql, DGMenor)
                         Tabreporte.Visible = True
                         TabMayor.Text = "MAYOR"
                         TabMenor.Text = "MENOR"
                         BtnReporte.Visible = True
                     End If
+
+                End If
+            Else
+                'Reporte de utilidad
+                If CBTipoReporte.Text = "Utilidad" Then
+                    CBRuta.Visible = True
+                    LbRuta.Visible = True
+                    CBRango.Visible = True
+                    LbRango.Visible = True
+                    If CBRuta.Text = "-- Seleccione--" Then
+
+                    Else
+                        If CBRango.Text.ToString = "-- Seleccione--" Then
+                        Else
+                            sql = "SELECT cliente AS CLIENTE, COUNT(*) AS RECARGAS,SUM(utilidad) AS UTILIDAD
+                            FROM volumenventa
+                            WHERE puntoventa='" + CBRuta.Text.ToString + "'
+                            GROUP BY CLIENTE
+                            ORDER BY UTILIDAD DESC
+                            LIMIT " + CBRango.Text.ToString + ";"
+                            mostrarDatosDataGridViewComisiones(sql, DGMayor)
+                            sql = "SELECT cliente AS CLIENTE,count(*) AS RECARGAS, SUM(utilidad) AS UTILIDAD
+                            FROM volumenventa
+                            WHERE puntoventa='" + CBRuta.Text.ToString + "'
+                            GROUP BY CLIENTE
+                            ORDER BY UTILIDAD ASC
+                            LIMIT " + CBRango.Text.ToString + ";"
+                            mostrarDatosDataGridViewComisiones(sql, DGMenor)
+                            Tabreporte.Visible = True
+                            TabMayor.Text = "MAYOR"
+                            TabMenor.Text = "MENOR"
+                            BtnReporte.Visible = True
+                        End If
+
+                    End If
                 Else
                     'Reporte Comparación de Rutas
                     If CBTipoReporte.Text = "Comparación Rutas" Then
                         CBRuta.Visible = False
                         LbRuta.Visible = False
+                        CBRango.Visible = False
+                        LbRango.Visible = False
                         sql = "SELECT puntoventa AS RUTA,SUM(utilidad) as UTILIDAD
                                 FROM volumenventa
                                 GROUP BY puntoventa
@@ -411,22 +437,28 @@ Module MetodosDll
                         If CBTipoReporte.Text = "Comparación Utilidad Fuerzas de Venta" Then
                             CBRuta.Visible = False
                             LbRuta.Visible = False
-                            sql = "SELECT lada AS LADA,SUM(utilidad) as UTILIDAD
+                            CBRango.Visible = True
+                            LbRango.Visible = True
+                            If CBRango.Text.ToString = "-- Seleccione--" Then
+                            Else
+                                sql = "SELECT lada AS LADA,SUM(utilidad) as UTILIDAD
                                     FROM volumenventa
                                     GROUP BY LADA
                                     ORDER BY UTILIDAD DESC
-                                    LIMIT 10;"
-                            mostrarDatosDataGridViewComisiones(sql, DGMayor)
-                            sql = "SELECT lada AS LADA,SUM(utilidad) as UTILIDAD
+                                    LIMIT " + CBRango.Text.ToString + ";"
+                                mostrarDatosDataGridViewComisiones(sql, DGMayor)
+                                sql = "SELECT lada AS LADA,SUM(utilidad) as UTILIDAD
                                     FROM volumenventa
                                     GROUP BY LADA
                                     ORDER BY UTILIDAD ASC
-                                    LIMIT 10;"
-                            mostrarDatosDataGridViewComisiones(sql, DGMenor)
-                            Tabreporte.Visible = True
-                            TabMayor.Text = "MAYOR"
-                            TabMenor.Text = "MENOR"
-                            BtnReporte.Visible = True
+                                    LIMIT " + CBRango.Text.ToString + ";"
+                                mostrarDatosDataGridViewComisiones(sql, DGMenor)
+                                Tabreporte.Visible = True
+                                TabMayor.Text = "MAYOR"
+                                TabMenor.Text = "MENOR"
+                                BtnReporte.Visible = True
+                            End If
+
                         End If
                     End If
                 End If
