@@ -22,6 +22,7 @@ Partial Class Inicio
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Inicio))
         Me.MenuInicio = New System.Windows.Forms.MenuStrip()
         Me.AccesoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoginToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -52,13 +53,13 @@ Partial Class Inicio
         'LoginToolStripMenuItem
         '
         Me.LoginToolStripMenuItem.Name = "LoginToolStripMenuItem"
-        Me.LoginToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.LoginToolStripMenuItem.Size = New System.Drawing.Size(121, 26)
         Me.LoginToolStripMenuItem.Text = "Login"
         '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(121, 26)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'CargarReportesToolStripMenuItem
@@ -79,6 +80,7 @@ Partial Class Inicio
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1053, 687)
         Me.Controls.Add(Me.MenuInicio)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuInicio
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False

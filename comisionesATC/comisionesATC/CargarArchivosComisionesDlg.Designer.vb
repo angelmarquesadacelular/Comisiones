@@ -36,6 +36,7 @@ Partial Class CargarArchivosComisionesDlg
         Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CargarArchivosComisionesDlg))
         Me.MenuComisiones = New System.Windows.Forms.MenuStrip()
         Me.ImportarArchivoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GenerarReporteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -602,6 +603,7 @@ Partial Class CargarArchivosComisionesDlg
         Me.Controls.Add(Me.PBCargar)
         Me.Controls.Add(Me.DGImportacion)
         Me.Controls.Add(Me.MenuComisiones)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuComisiones
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False

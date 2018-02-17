@@ -22,6 +22,7 @@ Partial Class Estadisticas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Estadisticas))
         Me.CREstadisticas = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.SuspendLayout()
         '
@@ -33,7 +34,7 @@ Partial Class Estadisticas
         Me.CREstadisticas.Location = New System.Drawing.Point(12, 12)
         Me.CREstadisticas.Name = "CREstadisticas"
         Me.CREstadisticas.ShowLogo = False
-        Me.CREstadisticas.Size = New System.Drawing.Size(1176, 865)
+        Me.CREstadisticas.Size = New System.Drawing.Size(1435, 865)
         Me.CREstadisticas.TabIndex = 16
         Me.CREstadisticas.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         '
@@ -41,8 +42,9 @@ Partial Class Estadisticas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1245, 1045)
+        Me.ClientSize = New System.Drawing.Size(1459, 1045)
         Me.Controls.Add(Me.CREstadisticas)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Estadisticas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Estadisticas"
