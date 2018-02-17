@@ -32,19 +32,23 @@ Partial Class ReportesEstadisticosDlg
         Me.TabMenor = New System.Windows.Forms.TabPage()
         Me.DGReporteMenor = New System.Windows.Forms.DataGridView()
         Me.TabMayor = New System.Windows.Forms.TabPage()
-        Me.DGReporteMayor = New System.Windows.Forms.DataGridView()
         Me.TabReporte = New System.Windows.Forms.TabControl()
+        Me.LbRango = New System.Windows.Forms.Label()
+        Me.CBRango = New System.Windows.Forms.ComboBox()
+        Me.BtnGenerar = New System.Windows.Forms.Button()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.DGReporteMayor = New System.Windows.Forms.DataGridView()
         Me.TabMenor.SuspendLayout()
         CType(Me.DGReporteMenor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabMayor.SuspendLayout()
-        CType(Me.DGReporteMayor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabReporte.SuspendLayout()
+        CType(Me.DGReporteMayor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LbTipoReporte
         '
         Me.LbTipoReporte.AutoSize = True
-        Me.LbTipoReporte.Location = New System.Drawing.Point(12, 9)
+        Me.LbTipoReporte.Location = New System.Drawing.Point(19, 9)
         Me.LbTipoReporte.Name = "LbTipoReporte"
         Me.LbTipoReporte.Size = New System.Drawing.Size(111, 17)
         Me.LbTipoReporte.TabIndex = 0
@@ -126,6 +130,50 @@ Partial Class ReportesEstadisticosDlg
         Me.TabMayor.Text = "Mayor"
         Me.TabMayor.UseVisualStyleBackColor = True
         '
+        'TabReporte
+        '
+        Me.TabReporte.Controls.Add(Me.TabMayor)
+        Me.TabReporte.Controls.Add(Me.TabMenor)
+        Me.TabReporte.Location = New System.Drawing.Point(12, 84)
+        Me.TabReporte.Name = "TabReporte"
+        Me.TabReporte.SelectedIndex = 0
+        Me.TabReporte.Size = New System.Drawing.Size(653, 666)
+        Me.TabReporte.TabIndex = 4
+        '
+        'LbRango
+        '
+        Me.LbRango.AutoSize = True
+        Me.LbRango.Location = New System.Drawing.Point(19, 44)
+        Me.LbRango.Name = "LbRango"
+        Me.LbRango.Size = New System.Drawing.Size(122, 17)
+        Me.LbRango.TabIndex = 6
+        Me.LbRango.Text = "Rango de Valores"
+        '
+        'CBRango
+        '
+        Me.CBRango.FormattingEnabled = True
+        Me.CBRango.Items.AddRange(New Object() {"-- Seleccione--", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"})
+        Me.CBRango.Location = New System.Drawing.Point(143, 41)
+        Me.CBRango.Name = "CBRango"
+        Me.CBRango.Size = New System.Drawing.Size(121, 24)
+        Me.CBRango.TabIndex = 7
+        '
+        'BtnGenerar
+        '
+        Me.BtnGenerar.Location = New System.Drawing.Point(281, 41)
+        Me.BtnGenerar.Name = "BtnGenerar"
+        Me.BtnGenerar.Size = New System.Drawing.Size(75, 24)
+        Me.BtnGenerar.TabIndex = 8
+        Me.BtnGenerar.Text = "Generar"
+        Me.BtnGenerar.UseVisualStyleBackColor = True
+        '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(565, 766)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(100, 23)
+        Me.ProgressBar1.TabIndex = 9
+        '
         'DGReporteMayor
         '
         Me.DGReporteMayor.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
@@ -144,21 +192,15 @@ Partial Class ReportesEstadisticosDlg
         Me.DGReporteMayor.Size = New System.Drawing.Size(629, 612)
         Me.DGReporteMayor.TabIndex = 0
         '
-        'TabReporte
-        '
-        Me.TabReporte.Controls.Add(Me.TabMayor)
-        Me.TabReporte.Controls.Add(Me.TabMenor)
-        Me.TabReporte.Location = New System.Drawing.Point(12, 62)
-        Me.TabReporte.Name = "TabReporte"
-        Me.TabReporte.SelectedIndex = 0
-        Me.TabReporte.Size = New System.Drawing.Size(653, 666)
-        Me.TabReporte.TabIndex = 4
-        '
         'ReportesEstadisticosDlg
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(727, 740)
+        Me.ClientSize = New System.Drawing.Size(727, 801)
+        Me.Controls.Add(Me.ProgressBar1)
+        Me.Controls.Add(Me.BtnGenerar)
+        Me.Controls.Add(Me.CBRango)
+        Me.Controls.Add(Me.LbRango)
         Me.Controls.Add(Me.BtnImprimir)
         Me.Controls.Add(Me.TabReporte)
         Me.Controls.Add(Me.CBRuta)
@@ -172,8 +214,8 @@ Partial Class ReportesEstadisticosDlg
         Me.TabMenor.ResumeLayout(False)
         CType(Me.DGReporteMenor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabMayor.ResumeLayout(False)
-        CType(Me.DGReporteMayor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabReporte.ResumeLayout(False)
+        CType(Me.DGReporteMayor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -187,6 +229,10 @@ Partial Class ReportesEstadisticosDlg
     Friend WithEvents TabMenor As TabPage
     Friend WithEvents DGReporteMenor As DataGridView
     Friend WithEvents TabMayor As TabPage
-    Friend WithEvents DGReporteMayor As DataGridView
     Friend WithEvents TabReporte As TabControl
+    Friend WithEvents LbRango As Label
+    Friend WithEvents CBRango As ComboBox
+    Friend WithEvents BtnGenerar As Button
+    Friend WithEvents ProgressBar1 As ProgressBar
+    Friend WithEvents DGReporteMayor As DataGridView
 End Class

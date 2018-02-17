@@ -63,4 +63,16 @@
                 AccesarSistema()
         End Select
     End Sub
+
+    Private Sub TbxUsuario_KeyPress(ByVal sender As Object, e As KeyPressEventArgs) Handles TbxUsuario.KeyPress
+        If Char.IsWhiteSpace(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub TbxPassword_KeyPress(ByVal sender As Object, e As KeyPressEventArgs) Handles TbxPassword.KeyPress
+        If Char.IsWhiteSpace(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
 End Class
