@@ -22,6 +22,7 @@ Partial Class LoginDlg
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginDlg))
         Me.LbUsuario = New System.Windows.Forms.Label()
         Me.TbxUsuario = New System.Windows.Forms.TextBox()
         Me.LbPassword = New System.Windows.Forms.Label()
@@ -81,6 +82,7 @@ Partial Class LoginDlg
         Me.Controls.Add(Me.LbPassword)
         Me.Controls.Add(Me.TbxUsuario)
         Me.Controls.Add(Me.LbUsuario)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "LoginDlg"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

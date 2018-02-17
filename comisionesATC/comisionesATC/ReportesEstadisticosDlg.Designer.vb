@@ -39,6 +39,7 @@ Partial Class ReportesEstadisticosDlg
         Me.CBRango = New System.Windows.Forms.ComboBox()
         Me.BtnGenerar = New System.Windows.Forms.Button()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.LbGenerando = New System.Windows.Forms.Label()
         Me.TabMenor.SuspendLayout()
         CType(Me.DGReporteMenor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabMayor.SuspendLayout()
@@ -193,11 +194,22 @@ Partial Class ReportesEstadisticosDlg
         Me.ProgressBar1.Size = New System.Drawing.Size(100, 23)
         Me.ProgressBar1.TabIndex = 9
         '
+        'LbGenerando
+        '
+        Me.LbGenerando.AutoSize = True
+        Me.LbGenerando.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.LbGenerando.Location = New System.Drawing.Point(424, 770)
+        Me.LbGenerando.Name = "LbGenerando"
+        Me.LbGenerando.Size = New System.Drawing.Size(135, 17)
+        Me.LbGenerando.TabIndex = 10
+        Me.LbGenerando.Text = "Generando Reporte"
+        '
         'ReportesEstadisticosDlg
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(668, 801)
+        Me.Controls.Add(Me.LbGenerando)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.BtnGenerar)
         Me.Controls.Add(Me.CBRango)
@@ -237,4 +249,5 @@ Partial Class ReportesEstadisticosDlg
     Friend WithEvents BtnGenerar As Button
     Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents DGReporteMayor As DataGridView
+    Friend WithEvents LbGenerando As Label
 End Class

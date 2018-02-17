@@ -15,6 +15,10 @@ Public Class CargarArchivosComisionesDlg
         DGGraficaVolumenVenta.Visible = False
         DGGraficaReporteSemanales.Visible = False
         GenerarReporteToolStripMenuItem.Enabled = False
+        DGConComision.Enabled = False
+        DGSinComision.Enabled = False
+        DGVolumenVentaCredito.Enabled = False
+        DGVolumenVentaEfectivo.Enabled = False
     End Sub
 
     Private Sub CargarReportes()

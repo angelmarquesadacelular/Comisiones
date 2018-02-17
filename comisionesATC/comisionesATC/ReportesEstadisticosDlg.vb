@@ -23,6 +23,15 @@ Public Class ReportesEstadisticosDlg
         bandera = 1
         ProgressBar1.Visible = 0
         BtnGenerar.Visible = False
+        LbGenerando.Visible = False
+        CBTipoReporte.AutoCompleteMode = AutoCompleteMode.SuggestAppend
+        CBTipoReporte.AutoCompleteSource = AutoCompleteSource.ListItems
+        CBRuta.AutoCompleteMode = AutoCompleteMode.SuggestAppend
+        CBRuta.AutoCompleteSource = AutoCompleteSource.ListItems
+        CBRango.AutoCompleteMode = AutoCompleteMode.SuggestAppend
+        CBRango.AutoCompleteSource = AutoCompleteSource.ListItems
+        DGReporteMayor.Enabled = False
+        DGReporteMenor.Enabled = False
     End Sub
 
     Private Sub CBTipoReporte_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBTipoReporte.SelectedIndexChanged
@@ -42,7 +51,7 @@ Public Class ReportesEstadisticosDlg
                     CBRuta.Visible = False
                     LbRuta.Visible = False
                     CBRango.SelectedIndex = 0
-                    BtnGenerar.Visible = True
+                    BtnGenerar.Visible = False
                 Else
                     CBRuta.Visible = True
                     LbRuta.Visible = True
@@ -50,7 +59,7 @@ Public Class ReportesEstadisticosDlg
                     CBRango.Visible = True
                     LbRango.Visible = True
                     CBRango.SelectedIndex = 0
-                    BtnGenerar.Visible = True
+                    BtnGenerar.Visible = False
                 End If
             End If
         Else
@@ -61,7 +70,6 @@ Public Class ReportesEstadisticosDlg
             BtnGenerar.Visible = False
             BtnImprimir.Visible = False
         End If
-
     End Sub
 
     Private Sub CBRuta_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBRuta.SelectedIndexChanged
@@ -105,6 +113,7 @@ Public Class ReportesEstadisticosDlg
         ProgressBar1.Value = 0
         Dim i As Integer = 0
         ProgressBar1.Visible = True
+        LbGenerando.Visible = True
         While (i < 10 And TabReporte.Visible = False)
             Thread.Sleep(200)
             ProgressBar1.Value = i
@@ -114,12 +123,13 @@ Public Class ReportesEstadisticosDlg
             End If
         End While
         ProgressBar1.Visible = False
-
+        LbGenerando.Visible = False
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnGenerar.Click
         Try
             If bandera > 0 Then
+                BtnGenerar.Visible = False
                 cargandoHilo = New System.Threading.Thread(AddressOf Cargando)
                 cargandoHilo.Start()
                 reporteHilo = New System.Threading.Thread(AddressOf Reporte)
