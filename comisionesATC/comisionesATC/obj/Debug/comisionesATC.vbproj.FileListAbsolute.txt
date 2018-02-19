@@ -142,10 +142,21 @@ C:\Users\angel\Desktop\Comisiones\comisionesATC\comisionesATC\obj\Debug\comision
 C:\Users\angel\Desktop\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.Resources.resources
 C:\Users\angel\Desktop\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.Reportes.resources
 C:\Users\angel\Desktop\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.vbproj.GenerateResource.Cache
-C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\bin\Debug\comisionesATC.exe.config
+C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.vbprojResolveAssemblyReference.cache
+C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.CargarArchivosComisionesDlg.resources
+C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.LoginDlg.resources
+C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.ReportesEstadisticosDlg.resources
+C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.Estadisticas.resources
+C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.Inicio.resources
+C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.Resources.resources
+C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.Reportes.resources
+C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.vbproj.GenerateResource.Cache
 C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.exe
 C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.xml
 C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.pdb
+C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\bin\Debug\comisionesATC.exe.config
+C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\bin\Debug\comisionesATC.exe.manifest
+C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\bin\Debug\comisionesATC.application
 C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\bin\Debug\comisionesATC.exe
 C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\bin\Debug\comisionesATC.pdb
 C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\bin\Debug\comisionesATC.xml
@@ -170,12 +181,5 @@ C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC
 C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\bin\Debug\stdole.dll
 C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\bin\Debug\MySql.Data.xml
-C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.vbprojResolveAssemblyReference.cache
-C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.CargarArchivosComisionesDlg.resources
-C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.LoginDlg.resources
-C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.ReportesEstadisticosDlg.resources
-C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.Estadisticas.resources
-C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.Inicio.resources
-C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.Resources.resources
-C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.Reportes.resources
-C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.vbproj.GenerateResource.Cache
+C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.exe.manifest
+C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.application
