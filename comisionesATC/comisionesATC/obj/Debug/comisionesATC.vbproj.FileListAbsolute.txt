@@ -179,3 +179,7 @@ C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC
 C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.Resources.resources
 C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.Reportes.resources
 C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.vbproj.GenerateResource.Cache
+C:\Users\angel\Desktop\Comisiones\comisionesATC\comisionesATC\bin\Debug\comisionesATC.exe.manifest
+C:\Users\angel\Desktop\Comisiones\comisionesATC\comisionesATC\bin\Debug\comisionesATC.application
+C:\Users\angel\Desktop\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.exe.manifest
+C:\Users\angel\Desktop\Comisiones\comisionesATC\comisionesATC\obj\Debug\comisionesATC.application

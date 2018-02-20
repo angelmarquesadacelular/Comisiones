@@ -1,4 +1,5 @@
-﻿Public Class Inicio
+﻿Imports System.Threading
+Public Class Inicio
     Dim sql As String
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         EstadísticasToolStripMenuItem.Enabled = False
