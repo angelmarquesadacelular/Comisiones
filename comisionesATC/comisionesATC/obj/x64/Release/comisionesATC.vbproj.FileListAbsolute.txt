@@ -41,3 +41,8 @@ C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC
 C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\x64\Release\comisionesATC.xml
 C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\x64\Release\comisionesATC.pdb
 C:\Users\calde\OneDrive\Escritorio\proyecto con vatillo\Comisiones\comisionesATC\comisionesATC\obj\x64\Release\comisionesATC.XmlSerializers.dll
+C:\Users\angel\Desktop\Comisiones\comisionesATC\comisionesATC\bin\x64\Release\comisionesATC.exe.config
+C:\Users\angel\Desktop\Comisiones\comisionesATC\comisionesATC\obj\x64\Release\comisionesATC.exe
+C:\Users\angel\Desktop\Comisiones\comisionesATC\comisionesATC\obj\x64\Release\comisionesATC.xml
+C:\Users\angel\Desktop\Comisiones\comisionesATC\comisionesATC\obj\x64\Release\comisionesATC.pdb
+C:\Users\angel\Desktop\Comisiones\comisionesATC\comisionesATC\obj\x64\Release\comisionesATC.XmlSerializers.dll
